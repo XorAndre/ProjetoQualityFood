@@ -6,7 +6,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //Pages 
 import Home from './Pages/Home'
 import Mapa from './Pages/Map'
-
+import Perfil from './Pages/Perfil'
+import Welcome from './Pages/Welcome'
+import Login from './Pages/Login'
 
 function IconWithBadge({ name, badgeCount, color, size }) {
   return (
@@ -49,7 +51,7 @@ export default function App() {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            if (route.name === 'Home') {
+            if (route.name === 'Login') {
               return (
                 <HomeIconWithBadge
                   name={
@@ -71,6 +73,15 @@ export default function App() {
                 />
               );
             }
+            else if (route.name === 'Perfil') {
+              return (
+                <Ionicons
+                  name={focused ? 'ios-people' : 'ios-people'}
+                  size={size}
+                  color={color}
+                />
+              );
+            }
           },
         })}
         tabBarOptions={{
@@ -78,8 +89,9 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Login" component={Login} />
         <Tab.Screen name="Mapa" component={Mapa} />
+        <Tab.Screen name="Perfil" component={Perfil} />
       </Tab.Navigator>
     </NavigationContainer>
   );
