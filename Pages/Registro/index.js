@@ -1,9 +1,5 @@
 import React from 'react';
 import { Reset } from 'styled-reset'
-import {
-  SafeAreaView,
-  SectionList,
-} from "react-native";
 //Componentes externos
 import {
     Content,
@@ -18,7 +14,7 @@ import {
   TitleLogo,
   ButtonLogin,
   InputsBrancos
-} from "../Login/Styles";
+} from "./Styles";
 const Registro = () => {
   return (
     <>
