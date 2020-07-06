@@ -11,7 +11,7 @@ import {
   Wrap
 } from "./Styles";
 
-const Mapa = () => {
+const Perfil = () => {
   return (
     <>
     <React.Fragment>
@@ -24,4 +24,4 @@ const Mapa = () => {
   );
 }
 
-export default Mapa;
+export default Perfil;
